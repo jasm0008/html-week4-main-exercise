@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Document information -->
+    <meta charset="UTF-8">
+    <title>Week 4 - Home</title>
+  </head>
+  <body>
+    <!-- Document Content -->
+    <header>
+        <h1>HTML Week 4 - Images, Links, Forms, and Tables</h1>
+        <nav>
+          <a href="about.html">About</a>
+          <!-- names anchors use the # to target an id attribute on another tag -->
+          <a href="#cats">Cats</a>
+        </nav>
+    </header>
+    <main>
+      <!-- the src, or source, is an attribute that tells the image tag which image it should display -->
+      <img src="images/kitten.jpg" alt="Kitten sleeping on a blanket" width="1000" title="Cute Kitten" />
+
+      <article>
+        <!-- the a tag, or anchor tag, creates a link to take a user somewhere else -->
+        <!-- the href tag tells the browser where the link should go -->
+        <!-- the text in between the opening and closing a tags is what the user clicks on -->
+        <!-- _blank in the target attribute opens the link in a new tab -->
+        <a href="https://google.ca" target="_blank">Google</a>
+      </article>
+      
+      <article id="cats">
+        <p>Things my cat does to keep me up at night</p>
+        <ul>
+          <li>Scratches at the door</li>
+          <li>Attacks my feet</li>
+          <li>Chases the other cats</li>
+        </ul>
+      </article>
+
+      <!-- the form tag defines the area of the form - when you submit, you submit all information
+      inside that form -->
+      <form action="index.html" method="get">
+        <!-- the label and the input are linked - the for attribute in the label tag must match the id
+        of the input tag -->
+        <!-- all form fields must have a type attribute (that defines what they are) and a name attribute
+        (that allows the place you send the information to access each field) -->
+        <p>
+          <label for="username">Name: </label>
+          <input id="username" type="text" name="username" placeholder="Bob Smith">
+        </p>
+        <p>
+          <!-- the password input field hides the characters the user types -->
+          <label for="pass">Password: </label>
+          <input id="pass" type="password" name="pass">
+        </p>
+        <p>
+          <!-- some inputs are more than just text, like the colour picker -->
+          <label for="col">Pick a colour: </label>
+          <input id="col" type="color" name="col">
+        </p>
+        <p>
+          <!-- the value attribute sets a default starting value for the form field -->
+          <label for="num">Pick a number: </label>
+          <input id="num" type="range" name="num" value="4">
+        </p>
+        <p>
+          <!-- text area is for multiple lines of text -->
+          <label for="info">Enter the info:</label>
+          <textarea id="info" name="info">This is the text</textarea>
+        </p>
+        <p>
+          <!-- the select tag is the dropdown menu, and the option tags are each item in the dropdown -->
+          <label for="fruit">Pick a fruit: </label>
+          <select id="fruit" name="fruit">
+            <!-- option tags must have a value, which is what gets sent with the form -->
+            <option value="default">Pick a fruit...</option>
+            <option value="banana">Banana</option>
+            <option value="apple">Apple</option>
+            <option value="grapes">Grapes</option>
+          </select>
+        </p>
+        <p>
+          <!-- the "checked" attribute on a checkbox makes it start off checked -->
+          <label for="spam">Spam me: </label>
+          <input type="checkbox" id="spam" name="spam" checked>
+        </p>
+        <p>
+          <!-- radio buttons need to have a matching name attribute to make them a set -->
+          <span>Do you like dogs:</span>
+          <label for="yes">Yes! </label>
+          <input type="radio" id="yes" name="dogs" value="yes">
+          <label for="no">No... </label>
+          <input type="radio" id="no" name="dogs" value="no">
+        </p>
+        <p>
+          <!-- the submit button submits the form! -->
+          <button type="submit" name="submit">Submit!</button>
+        </p>
+      </form>
+
+      <!-- create a table -->
+      <table>
+        <!-- thead defines the header area of the table -->
+        <thead>
+          <!-- tr defines a table row -->
+          <tr>
+            <!-- th defines a header for a column -->
+            <th>Name</th>
+            <th>Level</th>
+            <th>Student Number</th>
+          </tr>
+        </thead>
+        <!-- tbody defines the main area of the table-->
+        <tbody>
+          <tr>
+            <!-- td defines a table data cell -->
+            <td>Bob</td>
+            <td>01</td>
+            <td>123456</td>
+          </tr>
+          <tr>
+            <td>Sue</td>
+            <td>02</td>
+            <td>987664</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+        <article>&copy; Somebody, Somewhere, 2021</article>
+    </footer>
+  </body>
+</html>
